@@ -1,0 +1,29 @@
+COMANDOS
+
+RODANDO O SERVIDOR
+
+node app.js
+
+COMANDO PARA GERAR INFORMAÇÕES FAKE
+
+node gen_products.js
+node gen_people.js
+
+COMANDO ANGULAR
+
+CRIANDO O PROJETO
+ng new loginapp
+
+ADICIONANDO ANGULAR MATERIAL
+ng add @angular/material
+
+ADICIONANDO FLEX LAYOUT
+npm install --save @angular/flex-layout
+
+ADICIONANDO O MODULO MAIN
+ng g m -m app Main --routing
+
+ADICIONANDO COMPONENTES
+ng g c main/people
+ng g c main/products
+
