@@ -14,6 +14,9 @@ COMANDO ANGULAR
 CRIANDO O PROJETO
 ng new loginapp
 
+SE CRIAR O PROJETO E NAO CRIAR O APP-ROUTING EXECUTE O COMANDO ABAIXO
+ng generate module app-routing --flat --module=app
+
 ADICIONANDO ANGULAR MATERIAL
 ng add @angular/material
 
@@ -26,4 +29,12 @@ ng g m -m app Main --routing
 ADICIONANDO COMPONENTES
 ng g c main/people
 ng g c main/products
+
+ADICIONANDO UMA INTERFACE
+ng g i main/person
+ng g i main/product
+
+ADICIONANDO UM SERVICO
+ng g s main/main
+
 
