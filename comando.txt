@@ -30,11 +30,18 @@ ADICIONANDO COMPONENTES
 ng g c main/people
 ng g c main/products
 
+
 ADICIONANDO UMA INTERFACE
 ng g i main/person
 ng g i main/product
 
 ADICIONANDO UM SERVICO
 ng g s main/main
+
+ADICIONANDO MODULO AUTH 
+ng g m -m --routing Auth
+
+CRIANDO COMPONENTE DE LOGIN
+ng g c auth/login
 
 

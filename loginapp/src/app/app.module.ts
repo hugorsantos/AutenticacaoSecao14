@@ -7,6 +7,7 @@ import { MainModule } from './main/main.module';
 import { MaterialModule } from './material.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,    
     MaterialModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
