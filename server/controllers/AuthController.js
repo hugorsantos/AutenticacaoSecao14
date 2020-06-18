@@ -15,11 +15,11 @@ module.exports = {
                 res.status(200).json(user);
             }
             else {
-                res.status(403).json({message: 'Email already registered', error: {}});
+                res.status(403).json({message: 'E-mail já registrado', error: {}});
             }
         }
         catch(e) {
-            res.status(500).json({message: 'Error while saving the user', error: e});
+            res.status(500).json({message: 'Erro ao salvar o usuário', error: e});
         }
     },
 
@@ -42,7 +42,7 @@ module.exports = {
                 }
             }
             return res.status(404).json({
-                message: 'Wrong e-mail or password' })
+                message: 'E-mail ou senha incorretos' })
         })
     },
 
@@ -50,13 +50,13 @@ module.exports = {
         const token = req.get('Authorization');
 
         if (!token) {
-            return res.status(401).json({message: 'Token not found'});
+            return res.status(401).json({message: 'Token não encontrado'});
         }
         jwt.verify(token, consts.keyJWT, 
             (err, decoded) => {
                 if (err || !decoded) {
                     return res.status(401)
-                        .json({message: 'Wrong token. Athentication error'});
+                        .json({message: 'Token errado. Erro de autenticação'});
                 }
                 next();
             })
@@ -70,7 +70,7 @@ module.exports = {
                 UserModel.findById(id).lean().exec(function(err, user) {
                     if (err || !user) {
                         return res.status(500).json({
-                            message: 'Error when trying to fetch user data', error: err})
+                            message: 'Erro ao tentar buscar dados do usuário', error: err})
                     }
                     let token = jwt.sign({_id: user._id}, consts.keyJWT,{expiresIn: consts.expiresJWT});
                     delete user.password;                        
