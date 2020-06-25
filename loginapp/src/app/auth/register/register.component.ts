@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
     'password2': ['', [Validators.required, Validators.minLength(6)]],
   }, { validator: this.matchingPasswords});
   
-  states = ["MG", "RS", "SC", "GO", "PR", "SP"];
+  states = ["MG", "RS", "SC", "GO", "PR", "SP", "DF"];
 
   constructor(
     private fb: FormBuilder,
